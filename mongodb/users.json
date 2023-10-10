@@ -1,0 +1,17 @@
+[{
+  "name": "Siwakorn",
+  "email": "khemkhemsiwa555@gmail.com",
+  "password": "$2a$10$gahYtvUfCu5vw7RRaTDL.uKU1W9EGnqASbNrSZUq/hjlP.EjTtZqK",
+  "role": "Customer",
+  "gender": "Male",
+  "tel": "0652803448"
+},
+{
+  "name": "Piriyakorn",
+  "email": "piriyakorn@gmail.com",
+  "password": "$2a$10$TXHddOBBFC72V.d1Z8Ih8usHwl1Qr2ApOgtQnp18cndIlMuiPWFS6",
+  "role": "Admin",
+  "gender": "Male",
+  "tel": "0617019641"
+}
+]

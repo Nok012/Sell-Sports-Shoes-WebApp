@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:ital,wght@0,400;1,1000&display=swap');
+
+.image {
+    
+    background-image: url(./img/undraw_add_to_cart_re_wrdo.svg);
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.style button {
+    font-family: 'Nunito', sans-serif;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 0px;
+    background-image: linear-gradient(225deg, #9A76FF 50%,
+    #C387E8 100%);
+    position: relative;
+    margin: 10px;
+    transition: all 0.25s ease;
+    color: #fdfdfd;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow: 0 6px 24px hsla(240, 4%, 48%, 0.5);
+}
+
+.style button:hover {
+    transform: translate(0, -6px);
+    box-shadow: 0 6px 24px hsla(240, 19%, 27%, 0.5);
+    
+}
+
+.style button::after {
+    content: '';
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-color: #ff3cac;
+    background-image: linear-gradient(225deg, #ff3cac 0% , #26caf8 50%,
+    #c625d0 100%);
+    z-index: -1;
+    transition: all 0.25s ease;
+}
+
+.style button:hover::after {
+    transform: rotate(100deg);
+    
+}
+
+
+
+
+
+/* background-color: #ff3cac;
+    background-image: linear-gradient(255deg, #9A76FF 50%,
+    #C387E8 100%); */

@@ -1,0 +1,24 @@
+-- angular-app ---
+
+1. ng new angular-app
+2. cd ng new <ชื่อไฟล์>
+3. npm install bootstrap@4.6
+4. npm install jquery popper.js
+5. npm install --save font-awesome angular-font-awesome
+
+6. angular.json ที่บรรทัด 26
+"styles": [
+     "src/styles.css",
+     "node_modules/bootstrap/dist/css/bootstrap.min.css",
+     "node_modules/font-awesome/css/font-awesome.css"
+],
+"scripts": [
+     "node_modules/jquery/dist/jquery.min.js",
+     "node_modules/popper.js/dist/umd/popper.min.js",
+     "node_modules/bootstrap/dist/js/bootstrap.min.js"
+]
+npm install
+
+ng g c components/... name
+ng g s services/...name
+ng g interceptor Auth/auth

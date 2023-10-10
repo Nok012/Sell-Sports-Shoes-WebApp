@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:ital,wght@0,400;1,1000&display=swap');
+
+
+.style button {
+    font-family: 'Nunito', sans-serif;
+    background-color: #ffffff; 
+    color: #343A40; 
+    padding: 6px 30px;
+    border-radius: 15px;
+    border-color: #343A40;
+    box-shadow: 0 6px 24px hsla(0, 0%, 100%, 0.5);
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.style button:hover {
+    background-color: #343A40;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    border-color: #343A40;
+    box-shadow: 0 6px 24px hsla(0, 1%, 44%, 0.5);
+    cursor: pointer;
+}
+
+

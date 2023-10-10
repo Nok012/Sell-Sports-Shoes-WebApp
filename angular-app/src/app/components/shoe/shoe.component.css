@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:ital,wght@0,400;1,1000&display=swap');
+
+.cart button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    padding: 6px 25px;
+    background-image: linear-gradient(225deg, #9A76FF 50%,
+    #C387E8 100%);
+    position: relative;
+    margin: 10px;
+    transition: all 0.25s ease;
+    color: #fdfdfd;
+    overflow: hidden;
+    border-radius: 15px;
+    border-color: #9A76FF;
+    box-shadow: 0 6px 24px hsla(265, 25%, 60%, 0.5);
+    cursor: pointer;
+}
+
+.cart button:hover {
+    transform: translate(0, -6px);
+    box-shadow: 0 6px 24px hsla(240, 19%, 27%, 0.5);
+    
+}
+
+.cart button:after {
+    background-color: #343A40;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    background-color: #7d3cff;
+    background-image: linear-gradient(225deg, #ff3cac 0% , #26caf8 50%,
+    #c625d0 100%);
+    z-index: -1;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 24px hsla(0, 1%, 44%, 0.5);
+    cursor: pointer;
+}
+
+.style button:hover::after {
+    transform: rotate(100deg);
+    
+}
+
+.seemore button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    background-color: #ffffff; 
+    color: #343A40; 
+    padding: 6px 25px;
+    border-radius: 15px;
+    border-color: #343A40;
+    box-shadow: 0 6px 24px hsla(0, 0%, 100%, 0.5);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.seemore button:hover {
+    background-color: #343A40;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    border-color: #343A40;
+    box-shadow: 0 6px 24px hsla(0, 1%, 44%, 0.5);
+    cursor: pointer;
+}
+
+

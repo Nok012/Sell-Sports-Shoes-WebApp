@@ -1,0 +1,30 @@
+<h2>Customer</h2>
+<br />
+<div class="card">
+  <div class="table-responsive-xs">
+    <table class="table table-striped table-inverse">
+      <thead class="thead-inverse">
+        <tr>
+          <th>ID.</th>
+          <th></th>
+          <th>CusID</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Email</th>
+          <th>Tel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of ListCustomers; index as i">
+          <td scope="row">{{ i + 1 }}</td>
+          <td>{{ item.id }}</td>
+          <td>{{ item.CusID }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.gender }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.tel }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

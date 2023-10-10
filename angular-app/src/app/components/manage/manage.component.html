@@ -1,0 +1,72 @@
+<h2>Management Shoes</h2>
+
+<div class="style col-12 text-right ">
+  <button
+    routerLink="addshoe"
+    routerLinkActive="active"
+    class="button text-right bi bi-plus-circle-dotted"
+    (click)="onClick()"
+    > Add Shoe</button
+  >
+  &nbsp;&nbsp;&nbsp;
+</div>
+<br />
+<div class="card bg-dark">
+  <div class="table-responsive-xs">
+    <table class="table table-striped">
+      <thead class="thead-inverse thead-dark ">
+        <tr>
+          <th>No.</th>
+          <th>Size</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Type</th>
+          <th>Category</th>
+          <th>Quantity</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="bg-white">
+        <tr *ngFor="let item of ListShoe; index as i">
+          <td scope="row">{{ i + 1 }}</td>
+          <td>{{ item.size }}</td>
+          <td>{{ item.name }}</td>
+          <td>฿ {{ item.price }} </td>
+          <td>{{ item.type }}</td>
+          <td>{{ item.category }}</td>
+          <td >{{ item.quantity }}</td>
+    
+          <td >
+            <a
+              class="btn btn-outline-danger mr-1 "
+              role="button"
+              (click)="deleteShoe(item._id)"
+            >
+              <i class="bi bi-trash3"></i
+            ></a>
+            <a
+              class="btn btn-outline-success"
+              role="button"
+              (click)="onClickEdit(item._id)"
+            >
+              <i class="bi bi-pen"></i>
+            </a>
+          </td>
+        </tr>
+        <tr class="bg-dark">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+

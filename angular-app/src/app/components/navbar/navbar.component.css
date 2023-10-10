@@ -1,0 +1,9 @@
+.navbar {
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    background-image: linear-gradient(225deg, #383a3c 50%, #343A40 100%);
+    box-shadow: 0 6px 24px hsla(240, 4%, 48%, 0.5);
+
+}
+

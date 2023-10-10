@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito&display=swap');
+
+
+.welcome {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-bottom: 600px;
+    
+  }
+  
+.welcome h1 {
+    font-family: 'Luckiest Guy', cursive;
+    /* src:url(./Nunito/Nunito-Bold.ttf); */
+    font-size: 4.5rem;
+    color: #5d3783;
+
+}
+  
+.welcome h2{
+    font-family: 'Nunito', sans-serif;
+    src:url(./Nunito/Nunito-Regular.ttf);
+    font-size: 2.5rem;
+    color: #8365a2;
+
+}
+
+.welcome h3{
+  font-family: 'Nunito', sans-serif;
+  src:url(./Nunito/Nunito-Regular.ttf);
+  font-size: 20px;
+  color: #8365a2;
+  position: absolute;  
+}
+
+.welcome h4{
+    font-family: 'Nunito', sans-serif;
+    src:url(./Nunito/Nunito-Bold.ttf);
+    font-size: 19px;
+    color: #3d1665;
+    position: center;  
+    left: 100px; 
+}
+
+.welcome h5{
+  font-family: 'Nunito', sans-serif;
+  src:url(./Nunito/Nunito-Regular.ttf);
+  font-size: 18px;
+  color: #8365a2;
+  position: center;  
+}
+
+.welcome h6{
+  font-family: 'Nunito', sans-serif;
+  src:url(./Nunito/Nunito-Regular.ttf);
+  font-size: 16px;
+  color: #ffffff;
+  position: center;  
+}
+  
+.welcome-signup {
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 200px;
+    padding-bottom: 200px;
+  
+    
+}
+  
+.welcome-signup h1{
+  font-family: 'Nunito', sans-serif;
+    src:url(./Nunito/Nunito-Regular.ttf);
+    font-size: 3.5rem;
+    color: #ffffff;
+  
+  }
+  
+.welcome-signup h2{
+    font-family: 'Nunito', sans-serif;
+    src:url(./Nunito/Nunito-Regular.ttf);
+    font-size: 18px;
+    color: #ffffff;
+    position: absolute;  
+    left: 150px; 
+  }
+  
+.signin-form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background-image: url(./image/20692.jpg);
+      background-position: center;
+      background-size: auto;
+
+   }
+  
+   
+    
+.signin-form {
+      position: absolute;  
+      right: 150px; 
+      width: 420px;
+      background: transparent;
+      box-shadow: rgba(35, 26, 52, 0.16) 1px 1px 10px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      border-radius: 25px;
+      border-color: #2a2728;
+      background-color: rgb(255, 255, 255);
+
+
+    }
+    
+.signin-form-content {
+      padding-left: 12%;
+      padding-right: 12%;
+    
+}
+.signin-form-contented {
+  padding-left: 20%;
+  padding-right: 15%;
+
+}
+    
+.signin-form-title {
+      text-align: center;
+      margin-bottom: 1em;
+      font-size: 24px;
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+    }
+  
+.forgot-password a{
+      text-align: center;
+      text-decoration: none;
+      color: rgb(115, 115, 115);
+    }
+  
+.forgot-password a:hover{
+      text-decoration: underline;
+      color: rgb(0, 0, 0);
+      transition: 0.3s ease-in-out;
+    }
+   
+p{
+    text-align: right;
+}
+  
+.submit button{
+      background-color: #281C22; 
+      color: rgb(255, 255, 255); 
+      padding: 6px 30px;
+      border-radius: 15px;
+      border: none;
+      border-color: #281C22;
+      box-shadow: 0 6px 24px hsla(240, 1%, 35%, 0.5);
+      margin-bottom: 1rem;
+      cursor: pointer;
+}
+  
+.submit button:hover {
+      background-color: #39c4f6;
+      color: #cef6fe;
+      border-radius: 15px;
+      transition: 0.3s ease-in-out;
+      border-color: #281C22;
+      box-shadow: 0 6px 24px hsla(201, 68%, 77%, 0.5);
+      margin-bottom: 1rem;
+      cursor: pointer;
+}
+
+.signup button{
+  background-color: #ffffff; 
+  color: rgb(255, 13, 69); 
+  padding: 6px 30px;
+  border-radius: 15px;
+  border-color: #f44336;
+  box-shadow: 0 6px 24px hsla(0, 0%, 100%, 0.5);
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.signup button:hover {
+  background-color: #FF3847;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+  border-color: rgb(242, 189, 189);
+  box-shadow: 0 6px 24px hsla(0, 46%, 62%, 0.5);
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+label {
+    font-family: 'Nunito', sans-serif;
+    src:url(./Nunito/Nunito-Regular.ttf);
+    font-size: 16px;
+    font-weight: 200;
+    color: rgb(34, 34, 34); 
+}
+   

@@ -1,0 +1,97 @@
+[
+  {
+    "name": "NIKE air max 270 Blue",
+    "price": 4500,
+    "type": "Men",
+    "size": "US 9",
+    "category": "Basketball",
+    "quantity": 3,
+    "detail": "ไลฟ์สไตล์คู่แรกของ Nike นำสไตล์ ความสบายซึ่งแสดงนวัตกรรมที่ยอดเยี่ยมที่สุดของ Nike.",
+    "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/231381b3-0087-4efa-ad6a-15ab497715ae/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-air-max-270-xTswM2.png"
+  },
+  {
+    "name": "Nike Air Max 270 SE",
+    "price": 5500,
+    "type": "Men",
+    "size": "US 9.5",
+    "category": "Running",
+    "quantity": 2,
+    "detail": "สีแดง ล้ำสมัย ความสบายซึ่งแสดงนวัตกรรมที่ยอดเยี่ยมที่สุดของ Nike.",
+    "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/oayhdfynrmutq2bcsmpp/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-air-max-270-2V5C4p.png"
+  },
+  {
+    "name": "Nike Air Force 1 '07",
+    "price": 4300,
+    "type": "Women",
+    "size": "US 5",
+    "category": "Basketball",
+    "quantity": 3,
+    "detail": "เปล่งประกายไม่เสื่อมคลายเมื่อใส่ Nike Air Force 1 '07 สำหรับคุณผู้หญิง.",
+    "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a5da47dc-5323-4424-a192-463a51f2d802/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-air-force-1-07-F0nKtg.png"
+  },
+  { 
+    "name": "Nike Air Force 1 '07",
+    "price": 4300,
+    "type": "Women",
+    "size": "US 6",
+    "category": "Basketball", 
+    "quantity": 3,
+    "detail": "ทนทาน ลวดลายสะอาดตา หรือความมีสไตล์ที่ลงตัวซึ่งทำให้คุณเปล่งประกาย.",
+    "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a5da47dc-5323-4424-a192-463a51f2d802/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-air-force-1-07-F0nKtg.png"
+
+  },
+  {
+    "name": "Nike Air Force 1 Shadow",
+    "price": 5500,
+    "type": "Men",
+    "size": "US 7",
+    "category": "Basketball",
+    "quantity": 4,
+    "detail": "รวมทุกสิ่งที่คุณรักใน AF1 แต่เพิ่มเป็น 2 เท่า! Air Force 1 Shadow.",
+    "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e7f621f8-d62e-481c-9ca5-66c961d055df/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-air-force-1-shadow-3d774m.png"
+
+  },
+  {
+    "name": "PUMA Carina Lux Women's Trainers",
+    "price": 2500,
+    "type": "Women",
+    "size": "US 5",
+    "category": "Running",
+    "quantity": 6,
+    "detail": "ประสบการณ์ใหม่ไปกับ Carina Lux Women's Trainers",
+    "img": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1200,h_1200/global/370281/02/sv01/fnd/THA/fmt/png/Carina-Lux-Women's-Trainers"
+
+  },
+  {
+    "name": "PUMA ForeverRun NITRO Orange",
+    "price": 3990,
+    "type": "Men",
+    "size": "US 8",
+    "category": "Running",
+    "quantity": 5,
+    "detail": "รองเท้าวิ่งผู้ชาย ForeverRun NITRO กับวัสดุที่ทนทานตอบโจทย์",
+    "img": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1200,h_1200/global/377757/06/sv01/fnd/THA/fmt/png/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%8A%E0%B8%B2%E0%B8%A2-ForeverRun-NITRO"
+
+  },
+  {
+    "name": "adidas DURAMO SPEED SHOES",
+    "price": 3200,
+    "type": "Women",
+    "size": "US 6",
+    "category": "Running",
+    "quantity": 6,
+    "detail": "การผสานอัปเปอร์ผ้าตาข่ายที่ถักทอแบบพิเศษ เบา ระบายอากาศได้ดีเพื่อการเคลื่อนไหวที่เร็วขึ้นและทนทานสำหรับการวิ่ง",
+    "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/91b545a4c0eb4b5980522ad22670a34b_9366/Duramo_Speed_Shoes_White_IE9688_01_standard.jpg"
+  },
+  {
+    "name": "adidas DURAMO SPEED SHOES",
+    "price": 3200,
+    "type": "Women",
+    "size": "US 7",
+    "category": "Running",
+    "quantity": 4,
+    "detail": "การผสานอัปเปอร์ผ้าตาข่ายที่ถักทอแบบพิเศษ เบา ระบายอากาศได้ดีเพื่อการเคลื่อนไหวที่เร็วขึ้นและทนทานสำหรับการวิ่ง",
+    "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/91b545a4c0eb4b5980522ad22670a34b_9366/Duramo_Speed_Shoes_White_IE9688_01_standard.jpg"
+
+  }
+]

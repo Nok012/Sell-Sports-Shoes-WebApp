@@ -1,0 +1,167 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">🔴 Add-New Shoe</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <form [formGroup]="shoeForm">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-3">Name:</div>
+                <div class="col-md-9">
+                  <div class="form-group">
+                    <input type="text" class="form-control" formControlName="name" />
+                    <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="alert alert-danger">
+                      <div *ngIf="name?.errors?.['required']">
+                        Name is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">Price:</div>
+                <div class="col-md-9">
+                  <div class="form-group">
+                    <input type="number" class="form-control" formControlName="price" />
+                    <div *ngIf="price?.invalid && (price?.dirty || price?.touched)" class="alert alert-danger">
+                      <div *ngIf="price?.errors?.['required']">
+                        price is required.
+                      </div>
+                      <div *ngIf="price?.errors?.['min'] || price?.errors?.['max']">
+                        price must be 1-100000 ฿
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">Type:</div>
+                <div class="col-md-9">
+                  <div class="form-group">
+                    <select class="form-control" formControlName="type">
+                      <option *ngFor="let item of shoeType" value="{{ item }}">
+                        {{ item }}
+                      </option>
+                    </select>
+                    <div *ngIf="type?.invalid && (type?.dirty || type?.touched)" class="alert alert-danger">
+                      <div *ngIf="type?.errors?.['required']">
+                        Type is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">Size:</div>
+                <div class="col-md-9">
+                  <div class="form-group">
+                    <select class="form-control" formControlName="size">
+                      <option *ngFor="let item of shoeSize" value="{{ item }}">
+                        {{ item }}
+                      </option>
+                    </select>                    
+                    <div *ngIf="size?.invalid && (size?.dirty || size?.touched)" class="alert alert-danger">
+                      <div *ngIf="size?.errors?.['required']">
+                        size is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">Category:</div>
+                <div class="col-md-9">
+                  <div class="form-group">
+                    <select class="form-control" formControlName="category">
+                      <option *ngFor="let item of shoeCategory" value="{{ item }}">
+                        {{ item }}
+                      </option>
+                    </select>
+                    <div *ngIf="category?.invalid && (category?.dirty || category?.touched)" class="alert alert-danger">
+                      <div *ngIf="category?.errors?.['required']">
+                        size is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">Quantity:</div>
+                <div class="col-md-9">
+                  <div class="form-group">
+                    <input type="text" class="form-control" formControlName="quantity" />
+                    <div *ngIf="quantity?.invalid && (quantity?.dirty || quantity?.touched)" class="alert alert-danger">
+                      <div *ngIf="quantity?.errors?.['required']">
+                        Quantity is required.
+                      </div>
+                      <div *ngIf="quantity?.errors?.['pattern']">
+                        Quantity must be 1-9
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">Photo:</div>
+                <div class="col-md-9">
+                  <div class="form-group">
+                    <input type="file" class="form-control-file" formControlName="file"
+                      (change)="onChangeImg($event)" />
+                      <div *ngIf="file?.invalid && (file?.dirty || file?.touched)" class="alert alert-danger">
+                        <div *ngIf="file?.errors?.['required']">
+                          Image is required.
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                  <img *ngIf="previewLoaded" class="img-thumbnail" [src]="this.shoeForm.value.img"
+                    style="height: 150px" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">Details:</div>
+                <div class="col-md-9">
+                  <div class="form-group">
+                    <input type="text" class="form-control" formControlName="detail" />
+                    <div *ngIf="detail?.invalid && (detail?.dirty || detail?.touched)" class="alert alert-danger">
+                      <div *ngIf="detail?.errors?.['required']">
+                        Details is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="style col-lg-10 text-right mt-3 ">
+                  <button type="button" class="btn btn-primary" (click)="onSubmit()">
+                    Add
+                    <i class="bi bi-plus-circle-dotted"></i>
+                  </button>
+                </div>
+                <div class="reset mt-3">
+                  <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header"><h4>Display</h4></div>
+          <div class="card-body">
+            <h6>☑️ Form Value</h6> {{ this.shoeForm.value | json }} <br /><br />
+            <h6>☑️ Form Status</h6> {{ shoeForm.status | json }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

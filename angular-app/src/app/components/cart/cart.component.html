@@ -1,0 +1,41 @@
+<div class="modal-body">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-8">Datetime :</div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              value="{{ date | date: 'HH:mm' }} {{ date | date }}"
+              readonly
+            />
+          </div>
+        </div>
+  
+        <div class="col-md-8">Receive money :</div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="number" class="form-control" [formControl]="money" />
+          </div>
+        </div>
+  
+        <div class="col-lg-8">Amount product :</div>
+        <div class="col-lg-4">{{ getCounter() }} pair</div>
+        <br /><br />
+        <div class="col-lg-8">SumTotal :</div>
+        <div class="col-lg-4">฿ {{ getSumPrice() }} </div>
+        <br /><br />
+        <div class="col-lg-8">The change :</div>
+        <div class="col-lg-4">฿ {{ getChangePrice() }} </div>
+        <br /><br />
+      </div>
+      <div class="col-md-12">
+        <div class="style text-center">
+          <button type="button" class="button btn btn-primary" (click)="onSubmit()">
+            ฿ Payment 
+          </button>
+        </div>
+      </div>
+    </div>
+</div>
