@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "65253ea11c9bcc4b089321d4"
+  },
+  "date": "22/10/2565",
+  "totalPrice": 10000,
+  "user": {
+    "$oid": "65253ea11c9bcc4b089321c4"
+  },
+  "totalShoe": [
+    {
+      "shoe": {
+        "$oid": "65253ea11c9bcc4b089321ca"
+      },
+      "quantity": 2,
+      "_id": {
+        "$oid": "65253ea11c9bcc4b089321d5"
+      }
+    },
+    {
+      "shoe": {
+        "$oid": "65253ea11c9bcc4b089321c9"
+      },
+      "quantity": 2,
+      "_id": {
+        "$oid": "65253ea11c9bcc4b089321d6"
+      }
+    }
+  ],
+  "__v": 0
+}]
