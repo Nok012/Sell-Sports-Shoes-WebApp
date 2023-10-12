@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "64f1ce7000d22d29c7e529ce"
+  },
+  "name": "Siwakorn",
+  "email": "khemkhemsiwa555@gmail.com",
+  "password": "$2a$10$gahYtvUfCu5vw7RRaTDL.uKU1W9EGnqASbNrSZUq/hjlP.EjTtZqK",
+  "CusID": "C0",
+  "gender": "Male",
+  "tel": "0652803448"
+},{
+  "_id": {
+    "$oid": "636d5fd1a1b2dc81c285ecc2"
+  },
+  "name": "Piriyakorn",
+  "email": "piriyakorn@gmail.com",
+  "password": "$2a$10$TXHddOBBFC72V.d1Z8Ih8usHwl1Qr2ApOgtQnp18cndIlMuiPWFS6",
+  "CusID": "C1",
+  "gender": "Male",
+  "tel": "0617019641"
+}]

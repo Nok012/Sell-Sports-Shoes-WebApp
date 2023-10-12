@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const User = require("../schema/user")
 const Shoe = require("../schema/shoe")
 const Oder = require('../schema/oder')
+const Review = require('../schema/review')
 
 const setup = async (url, config) => {
     console.log('setup')
@@ -19,6 +20,14 @@ const setup = async (url, config) => {
     let shoes = fileSystem.readFileSync('../mongodb/shoes.json', 'utf8');
     let shoeJsonDataset = JSON.parse(shoes);
     await Shoe.insertMany(shoeJsonDataset).then(function(){ 
+        console.log("Data inserted")  
+    }).catch(function(error){ 
+        console.log(error)      
+    }); 
+
+    let reviews = fileSystem.readFileSync('../mongodb/reviews.json', 'utf8');
+    let reviewJsonDataset = JSON.parse(reviews);
+    await Review.insertMany(reviewJsonDataset).then(function(){ 
         console.log("Data inserted")  
     }).catch(function(error){ 
         console.log(error)      

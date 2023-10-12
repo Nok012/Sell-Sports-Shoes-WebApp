@@ -11,6 +11,8 @@ import { ShoeComponent } from './components/shoe/shoe.component';
 import { OrderComponent } from './components/order/order.component';
 import { AddshoeComponent } from './components/addshoe/addshoe.component';
 import { EditShoeComponent } from './components/edit-shoe/edit-shoe.component';
+import { ReviewComponent } from "./components/review/review.component";
+import { CreateReviewComponent } from "./components/create-review/create-review.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'manage', component: ManageComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'editshoe', component: EditShoeComponent },
+  { path: 'review', component: ReviewComponent },
+  { path: 'review/new', component: CreateReviewComponent },
   { path: '**', redirectTo: '' },
 ];
 

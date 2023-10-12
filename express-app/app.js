@@ -28,9 +28,9 @@ expressApp.use((req, res, next) => {
   return next();
 });
 
-expressApp.use(expressFunction.json());
+// expressApp.use(expressFunction.json());
 expressApp.use(expressFunction.json({limit: '50mb'}));
-expressApp.use(expressFunction.urlencoded({limit: '50mb'}));
+expressApp.use(expressFunction.urlencoded({limit: '50mb', extended: true}));
 expressApp.use((req, res, next) => {
   mongoose
     .connect(url, config)
@@ -49,6 +49,7 @@ expressApp.use("/login", require("./api/signin"));
 expressApp.use("/user", require("./api/user"));
 expressApp.use("/shoe", require("./api/shoe"));
 expressApp.use("/oder", require("./api/oder"));
+expressApp.use("/review", require("./api/review"));
 
 expressApp.listen(3000, async function () {
 
