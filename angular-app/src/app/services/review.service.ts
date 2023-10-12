@@ -1,5 +1,3 @@
-// src/app/review.service.ts
-
 import { Injectable } from '@angular/core';
 import { review, reviews } from '../models/review';
 import { HttpClient } from "@angular/common/http";
@@ -21,10 +19,6 @@ export class ReviewService {
   getReviewsForShoe(shoeName: number): review[] {
     return this.reviews.filter(review => review.shoeName === shoeName);
   }
-
-  // addReview(review: review) {
-  //   this.reviews.push(review);
-  // }
 
   addReview(data: any) {
     return this.http
