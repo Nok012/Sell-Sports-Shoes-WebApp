@@ -13,7 +13,7 @@ import { Router } from "@angular/router";
 })
 export class CreateReviewComponent implements OnInit {
   id = localStorage.getItem('currentUser');
-  email = this.id?.split('email":"')[1].split('","')[0];
+  name = this.id?.split('name":"')[1].split('","')[0];
   customer: any;
   shoes: any;
   shoeNames: string[] = []; // Store the list of shoe names
@@ -22,10 +22,10 @@ export class CreateReviewComponent implements OnInit {
 
   reviewForm = new FormGroup({
     shoeName: new FormControl('', [Validators.required]),
-    customerEmail: new FormControl(this.email, [Validators.required]),
+    username: new FormControl(this.name, [Validators.required]),
     rating: new FormControl(0, [Validators.required]),
-    comment: new FormControl('', [Validators.required]),
-    img: new FormControl('', [Validators.required]),
+    comment: new FormControl('', [Validators.required, Validators.maxLength(300)]),
+    img: new FormControl(''),
     datePosted: new FormControl(new Date(), [Validators.required]),
   });
 
@@ -43,10 +43,8 @@ export class CreateReviewComponent implements OnInit {
     private em: UserService,
     private shoeService: ShoeService,
     private router: Router
-    )
-  {
+  ) {
     const id = this.id?.split('id":"')[1].split('","')[0];
-    console.log(this.email)
 
     this.shoeService.getShoe().subscribe((shoes) => {
       this.shoeNames = shoes.map((shoe: { name: any; }) => shoe.name); // Use 'name' instead of 'id'
@@ -122,7 +120,7 @@ export class CreateReviewComponent implements OnInit {
       };
     }
   }
-  
+
   // =========== rating star ===========
 
   hoveredRating = 0;
@@ -131,11 +129,11 @@ export class CreateReviewComponent implements OnInit {
   setRating(rating: number) {
     this.selectedRating = rating;
   }
-  
+
   resetStars() {
     this.hoveredRating = 0;
   }
-  
+
   highlightStars(rating: number) {
     this.hoveredRating = rating;
   }
@@ -143,26 +141,57 @@ export class CreateReviewComponent implements OnInit {
   // =========== submit button ===========
 
   submitReview() {
+    console.log(this.name)
+    this.reviewForm.patchValue({
+      username: this.name,
+      datePosted: new Date(),
+      rating: this.selectedRating
+    });
+
+    // =========== edit error alert message ===========
+    let msg = ""
+    const shoeNameControl = this.reviewForm.get('shoeName');
+    const commentControl = this.reviewForm.get('comment');
+
+    if (shoeNameControl) {
+      const shoeNameValue = shoeNameControl?.value;
+
+      if (!shoeNameValue) {
+        msg += '[Product is required] '
+      }
+    }
+    if (this.selectedRating == 0) {
+      msg += '[The minimum rating is 1] '
+    }
+
+    if (commentControl) {
+      const commentValue = commentControl?.value;
+
+      if (commentValue && commentValue.length > 300) {
+        msg += '[Comment cannot exceed 300 characters] '
+      } else if (!commentValue) {
+        msg += '[Comment is required] '
+      }
+    }
+
+    // =========== submit ===========
+
     if (this.reviewForm.status == 'VALID') {
-      this.reviewForm.patchValue({
-        customerEmail: this.email,
-        datePosted: new Date(),
-        rating: this.selectedRating
-      });
-  
       var jsonObject: any = JSON.parse(JSON.stringify(this.reviewForm.value));
       this.reviewService.addReview(jsonObject);
       this.reviewService.submitStatus = true;
-      
+
     } else {
       this.reviewService.submitStatus = false;
     }
-  
+
+    // // =========== show alert message ===========
+
     if (this.reviewService.submitStatus) {
-      alert('บันทึกสำเร็จ');
-      this.resetForm(); // Reset the form after a successful submission
+      alert('Successful');
+      this.resetForm();
     } else {
-      alert('บันทึกไม่สำเร็จ');
+      alert('The process was unsuccessful: ' + msg)
     }
   }
 
@@ -178,7 +207,7 @@ export class CreateReviewComponent implements OnInit {
     try {
       this.shoeService.getShoe().subscribe(
         (data) => {
-          this.shoes = data; // Update the reviews array with the received data
+          this.shoes = data;
         },
         (err) => {
           console.log(err);

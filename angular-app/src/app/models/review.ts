@@ -1,7 +1,7 @@
 export interface review {
     _id: string;
     shoeName: any;
-    customerEmail: string;
+    username: string;
     rating: number;
     comment: string;
     img: string;

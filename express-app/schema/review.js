@@ -7,7 +7,7 @@ const reviewSchema = Schema(
         comment: String,
         img: String,
         datePosted: Date,
-        customerEmail: String | null,
+        username: String | null,
         shoeName: String
     },
     {
