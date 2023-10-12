@@ -16,7 +16,7 @@
               <div class="user-details">
                 <div class="username">
                   <span class="label">Username: </span>
-                  <span class="value" style="color: rgb(92, 92, 92);">{{ customer?.name }}</span>
+                  <span class="value" style="color: rgb(92, 92, 92);">{{ review.username }}</span>
                 </div>
                 <div class="shoeName">
                   <span class="label">Product: </span>
@@ -50,7 +50,9 @@
               </div>
             </div>
           </div>
-          <img [src]="review.img" alt="User Image" class="user-image">
+          <div class="user-image" *ngIf="review.img">
+            <img [src]="review.img" alt="User Image" class="user-image">
+          </div>
         </div>
       </div>
     </div>
