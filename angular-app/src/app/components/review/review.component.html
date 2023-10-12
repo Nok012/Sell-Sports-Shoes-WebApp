@@ -1,0 +1,58 @@
+<h2 style="text-align: center;">Product Reviews</h2>
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="search-bar" style="margin-bottom: 10px; margin-right: 32px;">
+    <input style="width: 300px;" type="text" id="shoeNameSearch" [(ngModel)]="shoeNameFilter" (input)="filterReviews()" placeholder="Enter product name">
+  </div>
+  <button (click)="goAddReview()" class="add-review-button">+</button>
+</div>
+
+<div class="columns">
+  <div class="column review-display">
+    <div class="review-list">
+      <div *ngFor="let review of (shoeNameFilter ? filteredReviews : getReversedReviews()); let i = index" class="review-card">
+        <div class="review-content">
+          <div class="content-details">
+            <div class="details">
+              <div class="user-details">
+                <div class="username">
+                  <span class="label">Username: </span>
+                  <span class="value" style="color: rgb(92, 92, 92);">{{ customer?.name }}</span>
+                </div>
+                <div class="shoeName">
+                  <span class="label">Product: </span>
+                  <span class="value" style="color: rgb(116, 116, 116);">{{ review.shoeName }}</span>
+                </div>
+              </div>
+              <div class="rating">
+                <span class="label" style="display: flex; align-items: center;">Rating:&nbsp;
+                  <span class="value">
+                    <div class="star-rating">
+                      <span *ngFor="let j of [1, 2, 3, 4, 5]" class="star" [class.active]="j <= review.rating">&#9733;</span>
+                    </div>
+                  </span>
+                </span>
+              </div>
+              <div class="comment">
+                <span class="label" style="font-weight: bold;">Comment: </span>
+                <span class="value" *ngIf="commentStates[i] || review.comment.length <= 36">
+                    <span [innerHTML]="addNewLinesToComment(review.comment)"></span>
+                </span>
+                <span class="value" *ngIf="!commentStates[i] && review.comment.length > 36">
+                    <span [innerHTML]="addNewLinesToComment(commentStates[i] ? review.comment : review.comment.slice(0, 36))"></span>
+                </span>
+                <p (click)="toggleComment(i)">
+                  {{ commentStates[i] ? 'Show Less' : 'Show More' }}
+                </p>
+              </div>
+              <div class="date-posted">
+                <span class="label">Posted on: </span>
+                <span class="value">{{ review.datePosted | date:'medium' }}</span>
+              </div>
+            </div>
+          </div>
+          <img [src]="review.img" alt="User Image" class="user-image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+.search-select {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+li:hover {
+    background-color: #f2f2f2;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.select-field,
+.input-field,
+.comment-textarea {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    text-align: left;
+}
+
+.select-field:focus,
+.input-field:focus,
+.comment-textarea:focus {
+    border-color: #383a3c;
+}

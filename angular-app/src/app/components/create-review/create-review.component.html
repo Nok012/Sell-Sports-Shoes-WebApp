@@ -1,0 +1,56 @@
+<div class="product-reviews">
+  <h2>Product Reviews</h2>
+  <br />
+
+  <div class="columns centered">
+    <div class="column review-submission">
+      <form (submit)="submitReview()" [formGroup]="reviewForm" class="review-form">
+        <div class="form-group">
+          <div class="input-row">
+            <label class="input-label">Username: </label>
+            <label class="input-field" style="border: 0px;margin-left: -12px;">{{ customer?.name }}</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-row">
+            <label class="input-label">Product Name:</label>
+            <app-search-select [options]="shoeNames" (shoeNameSelected)="updateShoeName($event)"
+              style="width: 70%;"></app-search-select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-row">
+            <label class="input-label">Rating:</label>
+            <div class="star-rating">
+              <span *ngFor="let i of [1, 2, 3, 4, 5]" (click)="setRating(i)" class="star"
+                [class.active]="i <= selectedRating" (mouseover)="highlightStars(i)" (mouseout)="resetStars()">
+                &#9733;
+              </span>
+            </div>
+            <input type="hidden" formControlName="rating">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-row">
+            <label class="input-label">Comment:</label>
+            <textarea formControlName="comment" class="comment-textarea input-field" placeholder="type comment.."
+              required></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-row">
+            <label class="input-label">Upload Image:</label>
+            <input type="file" formControlName="image" accept="image/*" (change)="onChangeImg($event)"
+              class="input-field input-file">
+          </div>
+        </div>
+        <button (click)="goBack()" class="back-button">Back</button> &nbsp;&nbsp;
+        <button type="submit" class="submit-button" style="margin-top: 20px;">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

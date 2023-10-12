@@ -1,0 +1,7 @@
+<div class="search-select">
+  <input type="text" placeholder="type for select product.." [(ngModel)]="searchTerm" (input)="filterOptions()"
+    (focus)="showDropdown = true" class="select-field">
+  <ul *ngIf="showDropdown">
+    <li *ngFor="let option of filteredOptions" (click)="selectOption(option)">{{ option }}</li>
+  </ul>
+</div>
