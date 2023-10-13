@@ -1,21 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:ital,wght@0,400;1,1000&display=swap');
 
 .img-thumbnail {
-    height: 350px;
-    width: 350px;
+    max-width: 350px;
+    max-height: 350px;
 }
 
-.card{
-    left: 200px;
-    width: 55%;
-}
-
-.alert {
+.alert-message {
     text-align: center;
     
     left:550px;
     width: 20%;
 }
+
+.form-edit{
+    justify-content: space-between;
+}
+
+
 
 .style button{
     font-family: 'Nunito', sans-serif;
