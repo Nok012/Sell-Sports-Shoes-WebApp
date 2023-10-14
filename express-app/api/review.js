@@ -7,7 +7,6 @@ const Review = require("../schema/review")
 
 router.route('/gets').get(auth, async (req, res) => {
     try {
-        console.log(req)
         const result = await Review.find()
         res.status(200).json(result)
     }

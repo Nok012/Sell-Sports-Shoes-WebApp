@@ -11,7 +11,7 @@ export class SignupComponent implements OnInit {
   @Input() signup!: string;
 
   customerForm = new FormGroup({
-    CusID: new FormControl('', [Validators.required, Validators.pattern('C[0-9]{2}')]),
+    // CusID: new FormControl('', [Validators.required, Validators.pattern('C[0-9]{2}')]),
     name: new FormControl('', [Validators.required]),
     gender: new FormControl('', [Validators.required]),
     password: new FormControl('', [

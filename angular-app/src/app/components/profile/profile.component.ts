@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
 
   customerEditForm = new FormGroup({
     id: new FormControl('', [Validators.required]),
-    role: new FormControl('', [Validators.required]),
+    // role: new FormControl('', [Validators.required]),
     name: new FormControl('', [Validators.required]),
     gender: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -66,7 +66,7 @@ export class ProfileComponent implements OnInit {
           this.customer = data;
           this.customerEditForm.patchValue({
             id: data?._id,
-            role: data?.role,
+            // role: data?.role,
             name: data?.name,
             gender: data?.gender,
             email: data?.email,

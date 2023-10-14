@@ -41,7 +41,7 @@ export class UserService {
 
   UpdateCustomerID(tid?: string, d?: any) {
     return this.http
-      .put<user>('http://localhost:3000/user/update' + tid, d)
+      .put<user>('http://localhost:3000/user/update/' + tid, d)
       .pipe(
         map((data) => {
           if (data) {

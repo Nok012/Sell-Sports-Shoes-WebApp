@@ -1,17 +1,60 @@
 [{
+  "_id": {
+    "$oid": "652a9a3164ced2d08b6cdfa8"
+  },
   "name": "Siwakorn",
   "email": "khemkhemsiwa555@gmail.com",
   "password": "$2a$10$gahYtvUfCu5vw7RRaTDL.uKU1W9EGnqASbNrSZUq/hjlP.EjTtZqK",
   "role": "Customer",
   "gender": "Male",
-  "tel": "0652803448"
+  "tel": "0652803448",
+  "__v": 0
 },
 {
+  "_id": {
+    "$oid": "652a9a3164ced2d08b6cdfa9"
+  },
   "name": "Piriyakorn",
   "email": "piriyakorn@gmail.com",
   "password": "$2a$10$TXHddOBBFC72V.d1Z8Ih8usHwl1Qr2ApOgtQnp18cndIlMuiPWFS6",
   "role": "Admin",
   "gender": "Male",
-  "tel": "0617019641"
-}
-]
+  "tel": "0617019641",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "652a9bde1ade3b35135d7f0a"
+  },
+  "name": "Customer1",
+  "email": "customer1@gmail.com",
+  "password": "$2a$10$.1xvWxjDV7lKdhihVK/cNOlLUblpCeaDw8L2IdiSb43A0Y.8l04hq",
+  "role": "Customer",
+  "gender": "Male",
+  "tel": "0611111111",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "652a9c881ade3b35135d7f0c"
+  },
+  "name": "Customer2",
+  "email": "customer2@gmail.com",
+  "password": "$2a$10$eUasX8dyLTm2FTIg5Z7w4eWuyYBtaUN9jCBWfOP8CnYhghRTJKPqe",
+  "role": "Customer",
+  "gender": "Female",
+  "tel": "0622222222",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "652a9cab1ade3b35135d7f0e"
+  },
+  "name": "Customer3",
+  "email": "customer3@gmail.com",
+  "password": "$2a$10$/O6B2JEtg0V8TodOsjJekehtgaNZqNB7sxcyqGsnDEYS3LUotkGEO",
+  "role": "Customer",
+  "gender": "Female",
+  "tel": "0633333333",
+  "__v": 0
+}]

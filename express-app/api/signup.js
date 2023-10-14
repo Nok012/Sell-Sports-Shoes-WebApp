@@ -14,7 +14,7 @@ const insertUser = (dataUser) => {
       name: dataUser.name,
       email: dataUser.email,
       password: dataUser.password,
-      CusID: dataUser.CusID,
+      role: dataUser.role,
       gender: dataUser.gender,
       tel: dataUser.tel,
     });
@@ -36,7 +36,7 @@ router.route("/signup").post((req, res) => {
         name: req.body.name,
         email: req.body.email,
         password: hashText,
-        role: req.body.role,
+        role: "Customer",
         gender: req.body.gender,
         tel: req.body.tel,
       };

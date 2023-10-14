@@ -5,7 +5,6 @@ const User = require("../schema/user")
 
 router.route('/gets').get( async (req, res) => {
   try {
-    console.log(5)
       const result = await User.find()
       console.log(result)
       res.status(200).json(result)

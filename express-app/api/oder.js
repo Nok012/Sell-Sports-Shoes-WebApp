@@ -5,7 +5,6 @@ const Oder = require("../schema/oder");
 
 router.route('/gets').get(auth, async (req, res) => {
     try {
-        console.log(1)
         const result = await Oder.find()
         res.status(200).json(result)
     }
