@@ -7,7 +7,11 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  role: any
+
+  constructor(private router: Router) { 
+    this.role = localStorage.getItem('role')
+  }
 
   ngOnInit(): void {
     

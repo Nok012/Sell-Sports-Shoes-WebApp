@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   currentUser?: login;
 
   uid = localStorage.getItem('currentUser')?.split('id":"')[1].split('","')[0];
+  role: any
   cart: shoes = [];
   n?: string;
   constructor(
@@ -24,12 +25,15 @@ export class NavbarComponent implements OnInit {
     private cus: UserService
   ) {
     this.login.currentUser.subscribe((x) => (this.currentUser = x));
-
+    this.role = localStorage.getItem('role')
     this.cart = this.cartService.getCart();
     this.getCustomerID(this.uid);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+    console.log(this.role)
+  }
 
   getCustomerID(tid?: string) {
     try {

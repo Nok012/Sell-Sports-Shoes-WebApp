@@ -18,6 +18,7 @@ const findUser = (email) => {
             name: data.name,
             email: data.email,
             password: data.password,
+            role: data.role
           });
         } else {
           reject(new Error("Cannot find email!!!"));

@@ -29,6 +29,7 @@ export class LoginService {
               'currentUser',
               JSON.stringify(data?.result)
             );
+            localStorage.setItem('role',data?.result.role)
           }
           return data;
         })
