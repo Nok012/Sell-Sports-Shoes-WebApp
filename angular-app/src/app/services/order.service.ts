@@ -12,8 +12,10 @@ export class OrderService {
 
   constructor(private http: HttpClient, private cartService: CartService, private shoeService: ShoeService) {}
 
-  orders: any;
-  order?: orderModel[];
+  private orders: order[] = [];
+  private shoe: [] = [];
+  order: any;
+  // order?: orderModel[];
   
   submitStatus = false;
 
@@ -21,13 +23,24 @@ export class OrderService {
 
 
   getOrder() {
-    return this.http.get<order>('http://localhost:3000/api/order').pipe(
+    return this.http.get<order>('http://localhost:3000/order/gets').pipe(
       map((data) => {
         if (data) {
-          this.orders = data;
-          console.log(this.orders);
+          this.order = data;
+          console.log(this.order);
         }
-        return this.orders;
+        return this.order;
+      })
+    );
+  }
+
+  getOrderById(id:any) {
+    return this.http.get<order>('http://localhost:3000/order/get/'+ id).pipe(
+      map((data) => {
+        if (data) {
+          this.order = data;
+        }
+        return this.order;
       })
     );
   }
@@ -37,7 +50,7 @@ export class OrderService {
   }
 
   addOrder(data: any) {
-    return this.http.post<any>('http://localhost:3000/api/addorder', data).pipe(
+    return this.http.post<any>('http://localhost:3000/order/create', data).pipe(
       map((data) => {
         return data;
       })
@@ -56,7 +69,7 @@ export class OrderService {
   }
 
   deleteOrder(id: number) {
-    return this.http.delete('http://localhost:3000/deleteorder/deleteorder/'+id).subscribe({
+    return this.http.delete('http://localhost:3000/order/delete/'+id).subscribe({
       next: (data) => {
         console.log(data);
       },

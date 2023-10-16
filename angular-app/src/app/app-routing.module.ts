@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'customer', component: CustomerComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
   { path: 'order', component: OrderComponent, canActivate: [AuthGuard] },
+  { path: 'order/:shoeID', component: OrderComponent, canActivate: [AuthGuard] },
   { path: 'manage', component: ManageComponent, canActivate: [AuthGuard] },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'editshoe', component: EditShoeComponent, canActivate: [AuthGuard] },

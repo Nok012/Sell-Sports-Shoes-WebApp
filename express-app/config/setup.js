@@ -2,7 +2,6 @@ const fileSystem = require('fs');
 const mongoose = require("mongoose");
 const User = require("../schema/user")
 const Shoe = require("../schema/shoe")
-const Oder = require('../schema/oder')
 const Review = require('../schema/review')
 
 const setup = async (url, config) => {
@@ -33,29 +32,15 @@ const setup = async (url, config) => {
         console.log(error)      
     }); 
 
+    let orders = fileSystem.readFileSync('../mongodb/orders.json', 'utf8');
+    let orderJsonDataset = JSON.parse(orders);
+    await orders.insertMany(orderJsonDataset).then(function(){ 
+        console.log("Data inserted")  
+    }).catch(function(error){ 
+        console.log(error)      
+    });
 
-    // demo oder ------------------------------------------------
-    const shoe = await Shoe.find()
-    const user = await User.find()
-    var oders = new Oder({
-        
-        date: "22/10/2565",
-        totalPrice: 10000,
-        user: user[0],
-        totalShoe:[{
-            shoe: shoe[2],
-            quantity: 2
-        },
-        {
-            shoe: shoe[1],
-            quantity: 2
-        }],
-
-      });
-    oders.save()
-     // demo oder --------------------------------------------------
-
-    
+   
 }
 
 

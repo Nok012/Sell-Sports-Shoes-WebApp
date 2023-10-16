@@ -1,10 +1,9 @@
 export interface order {
-   
-    menuordering: any;
-    sumprice: number;
-    time:Date;
-    
-  }
-  export type orderModel = order[];
-  
-  
+  userId: any;
+  menuordering: any[];
+  sumprice: number;
+  time: Date;
+
+}
+export type orderModel = order[];
+

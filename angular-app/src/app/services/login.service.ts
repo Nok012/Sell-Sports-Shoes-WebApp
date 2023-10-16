@@ -30,6 +30,7 @@ export class LoginService {
               JSON.stringify(data?.result)
             );
             localStorage.setItem('role',data?.result.role)
+            localStorage.setItem('_id',data?.result.id)
           }
           return data;
         })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 import { FormControl, Validators } from '@angular/forms';
@@ -17,6 +18,7 @@ export class CartComponent implements OnInit {
   constructor(
     private cart: CartService,
     private order: OrderService,
+    private router: Router
   ) {
     setInterval(() => {
       setInterval(() => {
@@ -53,6 +55,7 @@ export class CartComponent implements OnInit {
   onSubmit() {
     var m = this.money.value;
     console.log(Number(m) < this.cart.getSumPrice());
+    // const menuorderingData = this.cart.getCartid();
     if (
       this.cart.getCartid().length === 0 ||
       Number(m) < this.cart.getSumPrice()
@@ -62,16 +65,21 @@ export class CartComponent implements OnInit {
       return;
     }
     this.data.push({
+      userId: localStorage.getItem('_id'),
       menuordering: this.cart.getCartid(),
       sumprice: this.cart.getSumPrice(),
       time: new Date(),
     });
-    console.log(this.data);
+
 
     var jsonObject: any = JSON.parse(JSON.stringify(this.data));
     console.log(jsonObject);
 
     this.order.addOrder(jsonObject[0]);
     this.order.submitStatus = true;
+    // this.router.navigate(['/order'], {
+    //   queryParams: { data: JSON.stringify(this.data) },
+      
+    // });
   }
 }

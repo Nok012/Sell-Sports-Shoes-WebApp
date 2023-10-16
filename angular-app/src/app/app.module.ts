@@ -22,6 +22,8 @@ import { EditShoeComponent } from './components/edit-shoe/edit-shoe.component';
 import { ReviewComponent } from './components/review/review.component';
 import { CreateReviewComponent } from './components/create-review/create-review.component';
 import { SearchSelectComponent } from './components/search-select/search-select.component';
+import { CommonModule } from '@angular/common';
+import { OrderComponent } from './components/order/order.component';
 
 
 
@@ -37,6 +39,7 @@ import { SearchSelectComponent } from './components/search-select/search-select.
     ProfileComponent, 
     SignupComponent,
     ShoeComponent,
+    OrderComponent,
     CustomerComponent, 
     CartComponent, AddshoeComponent, EditShoeComponent, ReviewComponent, CreateReviewComponent, SearchSelectComponent],
   imports: [
@@ -44,7 +47,8 @@ import { SearchSelectComponent } from './components/search-select/search-select.
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },],
   bootstrap: [AppComponent],

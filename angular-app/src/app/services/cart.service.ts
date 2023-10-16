@@ -20,6 +20,8 @@ add(id: number){
   this.cartid.push(this.shoeService.getSomeShoe(id)._id)
   this.sumPrice += this.shoeService.getSomeShoe(id).price
   this.counter = this.cart.length;
+  console.log(this.cart)
+  console.log(this.cartid)
 
 }
 getCounter(){
