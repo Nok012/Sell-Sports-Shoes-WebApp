@@ -56,6 +56,7 @@ export class ReviewComponent implements OnInit {
         (data) => {
           this.reviews = data;
           this.commentStates = Array(data.length).fill(false);
+          console.log(data)
         },
         (err) => {
           console.log(err);
@@ -136,7 +137,6 @@ export class ReviewComponent implements OnInit {
     this.router.navigate(['review/new']);
   }
 
-
   // =========== toggle comment (show more/show less)===========
 
   commentStates: boolean[] = new Array(this.reviews.length).fill(false);
@@ -173,7 +173,7 @@ export class ReviewComponent implements OnInit {
   }
 
   // =========== filter username ===========
-  
+
   showMyReviews = true;
   filterByUsername() {
     const button = document.querySelector('.filter-button');
@@ -193,11 +193,10 @@ export class ReviewComponent implements OnInit {
       });
     }
     this.showMyReviews = !this.showMyReviews;
-    console.log(this.filteredReviews)
   }
 
   // =========== delete review ===========
-  
+
   deleteReview(reviewId: string) {
     if (confirm("Are you sure you want to delete this review?")) {
       this.reviewService.deleteReviewById(reviewId).add(() => {
