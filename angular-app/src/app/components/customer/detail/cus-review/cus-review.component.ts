@@ -21,7 +21,6 @@ export class CusReviewComponent implements OnInit {
     this.reviewService.getReviewByName(this.name).subscribe(
       data =>{
         this.data = data
-        console.log(data.length)
       }
     )
   }

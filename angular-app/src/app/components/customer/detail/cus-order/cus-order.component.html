@@ -1,10 +1,31 @@
 <h6 class="text-center border-bottom pb-2">Order</h6>
-<div *ngIf="data; then show else notshow"></div>
+<div *ngIf="data.length > 0; then show else notshow"></div>
 
 
 <ng-template #show>
-    <h6 class="text-center"> User ordert</h6>
+    <div class="card">
+        <div class="table-responsive-xs">
+          <table class="table table-striped table-inverse">
+            <thead class="thead-inverse thead-dark">
+              <tr>
+                <th>ID.</th>
+                <th>Amount</th>
+                <th>Total</th>
+                <th>Date</th>
 
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr *ngFor="let item of data; index as i">
+                <td scope="row">{{ i + 1 }}</td>
+                <td>{{ item.menuordering.length }}</td>
+                <td>{{ item.sumprice }}</td>
+                <td>{{ item.time | date:'medium'}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 </ng-template>
 <ng-template #notshow>
     <h6 class="text-center"> Never order yet</h6>
