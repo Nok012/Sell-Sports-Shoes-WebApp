@@ -14,7 +14,7 @@ import { Router } from "@angular/router";
 })
 export class ReviewComponent implements OnInit {
   id = localStorage.getItem('currentUser');
-  email = this.id?.split('email":"')[1].split('","')[0];
+  name = this.id?.split('name":"')[1].split('","')[0];
   customer: any;
   shoes: any;
   shoeNames: string[] = [];
@@ -36,10 +36,8 @@ export class ReviewComponent implements OnInit {
     private em: UserService,
     private shoeService: ShoeService,
     private router: Router
-    )
-  {
+  ) {
     const id = this.id?.split('id":"')[1].split('","')[0];
-    console.log(this.email)
 
     this.shoeService.getShoe().subscribe((shoes) => {
       this.shoeNames = shoes.map((shoe: { name: any; }) => shoe.name); // Use 'name' instead of 'id'
@@ -48,7 +46,7 @@ export class ReviewComponent implements OnInit {
     this.onLoading()
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   // =========== loading before page ===========
 
@@ -114,7 +112,7 @@ export class ReviewComponent implements OnInit {
       console.log(err);
     }
   }
-  
+
   // =========== rating star ===========
 
   hoveredRating = 0;
@@ -123,11 +121,11 @@ export class ReviewComponent implements OnInit {
   setRating(rating: number) {
     this.selectedRating = rating;
   }
-  
+
   resetStars() {
     this.hoveredRating = 0;
   }
-  
+
   highlightStars(rating: number) {
     this.hoveredRating = rating;
   }
@@ -137,10 +135,10 @@ export class ReviewComponent implements OnInit {
   goAddReview() {
     this.router.navigate(['review/new']);
   }
-  
-  
+
+
   // =========== toggle comment (show more/show less)===========
-  
+
   commentStates: boolean[] = new Array(this.reviews.length).fill(false);
 
   toggleComment(index: number) {
@@ -172,6 +170,40 @@ export class ReviewComponent implements OnInit {
     this.filteredReviews = this.reviews.filter((review) => {
       return review.shoeName.toLowerCase().includes(this.shoeNameFilter.toLowerCase());
     });
+  }
+
+  // =========== filter username ===========
+  
+  showMyReviews = true;
+  filterByUsername() {
+    const button = document.querySelector('.filter-button');
+    const currentState = button?.getAttribute('data-state');
+
+    // set button state
+    if (currentState === 'on') {
+      button?.setAttribute('data-state', 'off');
+    } else {
+      button?.setAttribute('data-state', 'on');
+    }
+
+    // set filter object
+    if (this.showMyReviews && this.name) {
+      this.filteredReviews = this.reviews.filter((review) => {
+        return review.username.toLowerCase() === this.name?.toLowerCase();
+      });
+    }
+    this.showMyReviews = !this.showMyReviews;
+    console.log(this.filteredReviews)
+  }
+
+  // =========== delete review ===========
+  
+  deleteReview(reviewId: string) {
+    if (confirm("Are you sure you want to delete this review?")) {
+      this.reviewService.deleteReviewById(reviewId).add(() => {
+        this.getReview();
+      });
+    }
   }
 }
 

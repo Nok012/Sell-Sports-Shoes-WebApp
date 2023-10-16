@@ -63,4 +63,17 @@ export class ReviewService {
       })
     );
   }
+
+  deleteReviewById(id: any) {
+    return this.http
+      .delete<review>('http://localhost:3000/review/delete/'+ id)
+      .subscribe({
+        next: (data) => {
+          console.log(data);
+        },
+        error: (error) => {
+          console.error('There was an error!', error);
+        },
+      });
+  }
 }
