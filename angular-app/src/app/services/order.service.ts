@@ -19,19 +19,7 @@ export class OrderService {
   
   submitStatus = false;
 
-  getOrderByID(tid?: string) {
-    return this.http
-      .get<order>('http://localhost:3000/order/gets')
-      .pipe(
-        map((data) => {
-          if (data) {
-            this.orders = data;
-            console.log(this.orders);
-          }
-          return this.orders;
-        })
-      );
-  }
+
 
   
 
