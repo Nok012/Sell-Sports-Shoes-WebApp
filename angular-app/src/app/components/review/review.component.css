@@ -72,21 +72,6 @@ h2 {
     margin-top: 10px;
 }
 
-.submit-button {
-    background-color: #383a3c;
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-.submit-button:hover {
-    background-color: #5f5f5f;
-}
-
 .review-display {
     background: #fff;
     padding: 20px;
