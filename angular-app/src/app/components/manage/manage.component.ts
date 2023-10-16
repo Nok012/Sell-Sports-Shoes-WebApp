@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ManageComponent implements OnInit {
   ListShoe: any;
   status?: any;
+  shoeId: any
   constructor(private router: Router, private shoe: ShoeService) {}
 
   ngOnInit(): void {
@@ -18,13 +19,16 @@ export class ManageComponent implements OnInit {
   }
 
   deleteShoe(item: any) {
-    alert('Remove Menu Successfully..');
-    this.shoe.deleteShoeById(item);  
+    this.shoe.deleteShoeById(item);
     window.location.reload()
   }
   onClickEdit(item: any) {
     localStorage.setItem('id',item)
     this.router.navigate(['/editshoe']);
+  }
+
+  selectShoe(item: any){
+    this.shoeId = item
   }
 
   onClick() {

@@ -16,7 +16,8 @@ export class EditShoeComponent implements OnInit {
   id: any
   data?: shoe
   mesage: any
-  alert?: boolean = false
+  alertFail?: boolean = false
+  alertSuccess?: boolean = false
 
   shoeForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -32,7 +33,7 @@ export class EditShoeComponent implements OnInit {
       Validators.required,
       Validators.pattern('[10-99]{1}'),
     ]),
-    file: new FormControl('', [Validators.required]),
+    file: new FormControl(''),
     img: new FormControl('', [Validators.required]),
     detail: new FormControl('', [Validators.required]),
   });
@@ -61,24 +62,31 @@ export class EditShoeComponent implements OnInit {
 
 
   onCancle(){
-    this.router.navigate(['/manage'])
+    this.router.navigate(['/manage/shoe'])
   }
   onSubmit (){
-    this.shoe.UpdateShoeByID(this.id,this.shoeForm.value).subscribe(result =>{
-      if (result){}
-        this.alert = true
-        this.mesage = result
-        // console.log(this.mesage.mesage)
-
-    })
-    
-    setTimeout(() => {
-      this.alert = false
-      setTimeout(() =>{
-        this.router.navigate(['/manage'])
+    if(this.shoeForm.status == 'VALID'){
+      this.shoe.UpdateShoeByID(this.id,this.shoeForm.value).subscribe(result =>{
+        if (result){}
+          this.alertSuccess = true
+          this.mesage = result
+  
+      }) 
+      setTimeout(() => {
+        this.alertSuccess = false
+        setTimeout(() =>{
+          this.router.navigate(['/manage/shoe'])
+        },1000)     
       },1000)
-     
-    },2000)
+
+    } else {
+      this.alertFail = true
+      this.mesage = {mesage:'Update Fail'}
+      setTimeout(() =>{
+        this.alertFail = false
+      },2000)
+    }
+    
     
   }
 

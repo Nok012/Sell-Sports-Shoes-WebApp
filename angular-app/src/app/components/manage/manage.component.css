@@ -42,3 +42,47 @@
     
 }
 
+
+
+#cancle{
+    background-color: #ffffff; 
+    color: rgb(255, 13, 69); 
+    border-radius: 15px;
+    border-color: #f44336;
+    box-shadow: 0 6px 24px hsla(0, 0%, 100%, 0.5);
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+  
+#cancle:hover {
+    background-color: #FF3847;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    border-color: rgb(242, 189, 189);
+    box-shadow: 0 6px 24px hsla(0, 46%, 62%, 0.5);
+    cursor: pointer;
+      
+}
+
+#ok{
+    background-color: #ffffff; 
+    color: rgb(13, 61, 255); 
+    border-radius: 15px;
+    border-color: #3936f4;
+    box-shadow: 0 6px 24px hsla(0, 0%, 100%, 0.5);
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+  
+#ok:hover {
+    background-color: #3863ff;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    border-color: rgb(192, 189, 242);
+    box-shadow: 0 6px 24px hsla(235, 46%, 62%, 0.5);
+    cursor: pointer;
+      
+}
+

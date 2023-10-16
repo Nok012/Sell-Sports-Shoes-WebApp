@@ -24,6 +24,10 @@ import { CreateReviewComponent } from './components/create-review/create-review.
 import { SearchSelectComponent } from './components/search-select/search-select.component';
 import { CommonModule } from '@angular/common';
 import { OrderComponent } from './components/order/order.component';
+import { DetailComponent } from './components/customer/detail/detail.component';
+import { CusOrderComponent } from './components/customer/detail/cus-order/cus-order.component';
+import { CusReviewComponent } from './components/customer/detail/cus-review/cus-review.component';
+
 
 
 
@@ -41,7 +45,15 @@ import { OrderComponent } from './components/order/order.component';
     ShoeComponent,
     OrderComponent,
     CustomerComponent, 
-    CartComponent, AddshoeComponent, EditShoeComponent, ReviewComponent, CreateReviewComponent, SearchSelectComponent],
+    CartComponent, 
+    AddshoeComponent, 
+    EditShoeComponent, 
+    ReviewComponent, 
+    CreateReviewComponent, 
+    SearchSelectComponent, 
+    DetailComponent, 
+    CusOrderComponent, 
+    CusReviewComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

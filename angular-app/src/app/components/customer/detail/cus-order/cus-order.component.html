@@ -1,0 +1,11 @@
+<h6 class="text-center border-bottom pb-2">Order</h6>
+<div *ngIf="data; then show else notshow"></div>
+
+
+<ng-template #show>
+    <h6 class="text-center"> User ordert</h6>
+
+</ng-template>
+<ng-template #notshow>
+    <h6 class="text-center"> Never order yet</h6>
+</ng-template>

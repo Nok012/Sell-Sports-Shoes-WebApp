@@ -26,15 +26,20 @@
         >
       </li>&nbsp;
       <li class="nav-item"  *ngIf="role==='Admin'">
-        <a routerLink="manage" routerLinkActive="active" class="btn btn-dark"
-          >Management</a
+        <a routerLink="manage/shoe" routerLinkActive="active" class="btn btn-dark"
+          >Shoe</a
         >
       </li>&nbsp;
       <li class="nav-item" *ngIf="role==='Customer'">
         <a routerLink="review" routerLinkActive="active" class="btn btn-dark"
           >Review</a
         >
-      </li>
+      </li>&nbsp;
+      <li class="nav-item" *ngIf="role==='Admin'">
+        <a routerLink="manage/customer" routerLinkActive="active" class="btn btn-dark"
+          >Customer</a
+        >
+      </li>     
     </ul>
   </div>
   &nbsp;
@@ -59,9 +64,9 @@
         routerLink="profile"
         routerLinkActive="active"
         ><i class="bi bi-person-circle" aria-hidden="true"></i>&nbsp;&nbsp;
-        Profile</a
-      >
-      <div class="dropdown-divider"></div>
+        Profile
+      </a>
+      <!-- <div class="dropdown-divider"></div>
       <a
         class="btn dropdown-item btn-dark"
         routerLink="customer"
@@ -69,14 +74,14 @@
         ><i class="bi bi-person-lines-fill" aria-hidden="true"></i
         >&nbsp;&nbsp;Customer</a
       >
-      <div class="dropdown-divider"></div>
+      <div class="dropdown-divider"></div> -->
       <a
         class="btn dropdown-item btn-dark"
         (click)="logout()"
         routerLinkActive="active"
         ><i class="bi bi-box-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Log
-        out</a
-      >
+        out
+      </a>
 
     </div>
   </div>

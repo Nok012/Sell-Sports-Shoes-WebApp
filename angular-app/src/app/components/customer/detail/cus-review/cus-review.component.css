@@ -1,0 +1,55 @@
+.user-review {
+    display: block;
+    background-color: rgb(242, 238, 238); 
+    color: rgb(17, 1, 1);
+    margin-bottom: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    box-shadow: 2px 3px #6f6c6c;
+    justify-content: center;
+    transition: all 0.5s ease;
+    
+}
+
+.user-review:hover{
+    transform: scale(1.05,1.05);
+}
+
+.user-image {
+    max-width: 200px;
+    max-height: 100%;
+}
+
+.user-main{
+    background-color: rgb(242, 238, 238);
+}
+
+
+.rating {
+    color: #383a3c;
+}
+
+.comment {
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.star.active {
+    color: gold;
+    font-size: 24px;
+}
+
+.star {
+    font-size: 24px;
+}
+
+.user-data{
+    text-align: start;
+}
+
+.user-comment {
+    max-width: 175px;
+    overflow: auto;
+}
+

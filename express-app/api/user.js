@@ -3,11 +3,22 @@ const router = expressFunction.Router();
 const auth = require("../auth/authorize");
 const User = require("../schema/user")
 
-router.route('/gets').get( async (req, res) => {
+router.route('/gets').get(auth, async (req, res) => {
   try {
       const result = await User.find()
       console.log(result)
       res.status(200).json(result)
+  }
+  catch (err){
+      res.status(500).json({err:err.message})
+  }
+})
+
+router.route('/gets/customer').get(auth, async (req, res) => {
+  try {
+    const result = await User.find({ role: 'Customer'}).exec();
+    console.log(result)
+    res.status(200).json(result)
   }
   catch (err){
       res.status(500).json({err:err.message})

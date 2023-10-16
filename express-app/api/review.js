@@ -78,6 +78,18 @@ router.route('/delete/:id').delete(auth, async (req, res) => {
     }
 })
 
+router.route('/get/name/:id').get(auth, async (req, res) => {
+    try {
+        const name = req.params.id
+        console.log(name)
+        const result = await Review.find({username: name}).exec()
+        res.status(200).json(result)
+    }
+    catch (err){
+        res.status(500).json({err:err.message})
+    }
+})
+
 
 
 module.exports = router;

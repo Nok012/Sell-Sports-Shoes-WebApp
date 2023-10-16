@@ -12,14 +12,22 @@ import { Router } from '@angular/router';
 export class CustomerComponent implements OnInit {
 
   ListCustomers: any;
+  customerId: any
+
   constructor(private customer: UserService, private router: Router) { this.onLoading(); }
 
   ngOnInit(): void {
     
   }
+
+  onClick(item:any) {
+    this.router.navigate(['manage/customer/detail']);
+    localStorage.setItem('uid',item)
+  }
+
   onLoading() {
     try {
-      this.customer.getCustomer().subscribe(
+      this.customer.getRoleCustomer().subscribe(
         (data) => {
           this.ListCustomers = data;
         },
@@ -30,5 +38,14 @@ export class CustomerComponent implements OnInit {
     } catch (err) {
       console.log(err);
     }
+  }
+
+  selectCustomer(item: any){
+    this.customerId = item
+  }
+
+  deleteCustomer(item: any) {
+    this.customer.deleteUserById(item);
+    window.location.reload()
   }
 }
