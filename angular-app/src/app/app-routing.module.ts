@@ -13,16 +13,18 @@ import { AddshoeComponent } from './components/addshoe/addshoe.component';
 import { EditShoeComponent } from './components/edit-shoe/edit-shoe.component';
 import { ReviewComponent } from "./components/review/review.component";
 import { CreateReviewComponent } from "./components/create-review/create-review.component";
+import { DetailComponent } from './components/customer/detail/detail.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'shoe', component: ShoeComponent, canActivate: [AuthGuard] },
   { path: 'addshoe', component: AddshoeComponent, canActivate: [AuthGuard] },
-  { path: 'customer', component: CustomerComponent, canActivate: [AuthGuard] },
+  { path: 'manage/customer', component: CustomerComponent, canActivate: [AuthGuard] },
+  { path: 'manage/customer/detail', component: DetailComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
   { path: 'order', component: OrderComponent, canActivate: [AuthGuard] },
-  { path: 'manage', component: ManageComponent, canActivate: [AuthGuard] },
+  { path: 'manage/shoe', component: ManageComponent, canActivate: [AuthGuard] },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'editshoe', component: EditShoeComponent, canActivate: [AuthGuard] },
   { path: 'review', component: ReviewComponent, canActivate: [AuthGuard] },

@@ -1,0 +1,36 @@
+.user-review{
+    max-height: 550px;
+   
+}
+.user-info{
+    position: relative;
+}
+
+.reset{
+    position: absolute;
+    right:3px;
+}
+.reset button {
+    background-color: #ffffff; 
+    color: rgb(255, 13, 69); 
+    padding: 6px 30px;
+   
+    border-color: #f44336;
+    box-shadow: 0 6px 24px hsla(0, 0%, 100%, 0.5);
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+  
+.reset button:hover {
+    background-color: #FF3847;
+    color: rgb(255, 255, 255);
+   
+    transition: 0.3s ease-in-out;
+    border-color: rgb(242, 189, 189);
+    box-shadow: 0 6px 24px hsla(0, 46%, 62%, 0.5);
+    cursor: pointer;
+      
+}
+
+
+

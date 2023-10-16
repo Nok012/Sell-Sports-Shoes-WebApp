@@ -48,7 +48,7 @@ expressApp.use("/login", require("./api/signup"));
 expressApp.use("/login", require("./api/signin"));
 expressApp.use("/user", require("./api/user"));
 expressApp.use("/shoe", require("./api/shoe"));
-expressApp.use("/oder", require("./api/oder"));
+expressApp.use("/order", require("./api/oder"));
 expressApp.use("/review", require("./api/review"));
 
 expressApp.listen(3000, async function () {

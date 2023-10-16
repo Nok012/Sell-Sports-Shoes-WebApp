@@ -1,0 +1,31 @@
+<h6 class="text-center border-bottom pb-2">Review</h6>
+
+<div *ngIf="data.length >0; then show else notshow"></div>
+
+<ng-template #show>
+    <div *ngFor="let item of data; index as i"  class="user-review pl-1 pt-1">
+        <div class="d-flex flex-row user-main">   
+            <div class="user-image" *ngIf="item.img">
+                <img [src]="item.img" alt="User Image" class="user-image">
+                <div> <h6>{{item?.shoeName}}</h6></div>
+            </div>
+            <div class=" d-flex flex-column user-data pl-1">     
+                <div class="rating">
+                    <span class="label" style="display: flex; align-items: center;">Rating:&nbsp;
+                      <span class="value">
+                        <div class="star-rating">
+                          <span *ngFor="let j of [1, 2, 3, 4, 5]" class="star" [class.active]="j <= item.rating">&#9733;</span>
+                        </div>
+                      </span>
+                    </span>
+                </div>
+                <div>{{item?.datePosted | date:'medium'}} </div>
+                <div class="user-comment">comment: {{item?.comment}}</div>
+            </div>      
+        </div>  
+    </div>
+</ng-template>
+<ng-template #notshow>
+    <h6 class="text-center"> Never review yet</h6>
+
+</ng-template>

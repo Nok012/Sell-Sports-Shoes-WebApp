@@ -52,8 +52,9 @@ export class ReviewService {
     );
   }
 
-  getReviewById(id:any) {
-    return this.http.get<review>('http://localhost:3000/review/get/'+ id).pipe(
+  getReviewByName(id:any) {
+    console.log(id)
+    return this.http.get<review>('http://localhost:3000/review/get/name/'+ id).pipe(
       map((data) => {
         if (data) {
           this.review = data;

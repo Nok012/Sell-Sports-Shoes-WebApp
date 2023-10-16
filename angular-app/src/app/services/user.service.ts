@@ -25,6 +25,18 @@ export class UserService {
     );
   }
 
+  getRoleCustomer() {
+    return this.http.get<users>('http://localhost:3000/user/gets/customer').pipe(
+      map((data) => {
+        if (data) {
+          this.customers = data;
+          console.log(this.customers);
+        }
+        return this.customers;
+      })
+    );
+  }
+
   getCustomerID(tid?: string) {
     return this.http
       .get<user>('http://localhost:3000/user/get/' + tid)
@@ -57,5 +69,18 @@ export class UserService {
         return data;
       })
     );
+  }
+
+  deleteUserById(id: any) {
+    return this.http
+      .delete<user>('http://localhost:3000/user/delete/'+ id)
+      .subscribe({
+        next: (data) => {
+          console.log(data);
+        },
+        error: (error) => {
+          console.error('There was an error!', error);
+        },
+      });
   }
 }

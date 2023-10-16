@@ -22,6 +22,10 @@ import { EditShoeComponent } from './components/edit-shoe/edit-shoe.component';
 import { ReviewComponent } from './components/review/review.component';
 import { CreateReviewComponent } from './components/create-review/create-review.component';
 import { SearchSelectComponent } from './components/search-select/search-select.component';
+import { DetailComponent } from './components/customer/detail/detail.component';
+import { CusOrderComponent } from './components/customer/detail/cus-order/cus-order.component';
+import { CusReviewComponent } from './components/customer/detail/cus-review/cus-review.component';
+
 
 
 
@@ -38,7 +42,15 @@ import { SearchSelectComponent } from './components/search-select/search-select.
     SignupComponent,
     ShoeComponent,
     CustomerComponent, 
-    CartComponent, AddshoeComponent, EditShoeComponent, ReviewComponent, CreateReviewComponent, SearchSelectComponent],
+    CartComponent, 
+    AddshoeComponent, 
+    EditShoeComponent, 
+    ReviewComponent, 
+    CreateReviewComponent, 
+    SearchSelectComponent, 
+    DetailComponent, 
+    CusOrderComponent, 
+    CusReviewComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
