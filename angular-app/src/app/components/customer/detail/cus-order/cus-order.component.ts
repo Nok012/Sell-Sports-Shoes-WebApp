@@ -15,11 +15,7 @@ export class CusOrderComponent implements OnInit {
   constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
-<<<<<<< HEAD
     console.log(this.uid)
-=======
-    
->>>>>>> d7eba57a10ee4ef455eabed0db89f4523f0e7c2d
     this.orderService.getOrderById(this.uid).subscribe(
       data =>{
           this.data = data
