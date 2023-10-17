@@ -16,7 +16,7 @@ export class CusOrderComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.uid)
-    this.orderService.getOrderByID(this.uid).subscribe(
+    this.orderService.getOrderById(this.uid).subscribe(
       data =>{
           console.log(data)
       }

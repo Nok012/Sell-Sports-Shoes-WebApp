@@ -1,7 +1,11 @@
-<div *ngFor="let order of orders">
-    <P>UserId: {{ order?.userId}}</P>
-    <p>Menu Ordering: {{ order?.menuordering }}</p>
-    <p>Sum Price: {{ order?.sumprice }}</p>
-    <p>Time: {{ order?.time | date }}</p>
+<h2 style="text-align: center;">Orders</h2>
+
+<div class="column">
+    <div class="card" *ngFor="let order of orders">
+        <P>USER id : <br> {{ order?.userId}}</P>
+        <p>Menu Ordering (รหัสสินค้า): <br>
+            {{ order?.menuordering }}</p>
+        <p>Sum Price (ราคา): {{ order?.sumprice }}</p>
+        <p>Time(วันที่สั่ง): {{ order?.time | date }}</p>
+    </div>
 </div>
-<p>order works!</p>

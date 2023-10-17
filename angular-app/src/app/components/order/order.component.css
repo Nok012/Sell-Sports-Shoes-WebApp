@@ -1,6 +1,14 @@
-.json-display {
-    font-size: 14px; /* ปรับขนาดตัวอักษรเล็กลง */
-    font-family: Arial, sans-serif; /* ระบุแบบอักษร */
-    white-space: pre-wrap; /* ให้ข้อความขึ้นบรรทัดใหม่ตามความเหมาะสม */
-    /* สามารถเพิ่มคุณสมบัติ CSS อื่น ๆ ตามที่คุณต้องการ */
-  }
+
+
+.card {
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 50%
+}
